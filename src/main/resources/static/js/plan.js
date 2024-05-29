@@ -155,6 +155,18 @@ const eventInit = () => {
 	})
 	
 	// 캘린더에서 일정 등록 버튼 클릭 시 
+	/*
+	$(document).on('click', '#article_wrap a.write_plan', (e) => {
+		console.log("[PLAN] WRITE_PLAN CLICK HANDLER");
+		
+		let year = current_year;
+		let month = current_month + 1;
+		let date = $(e.currentTarget).parent('div').siblings('div.date').text();
+		
+		showWritePlanView(year, month, date);
+		
+	})
+	*/
 	$(document).on('click', '#article_wrap a.write_plan', function() {
 		console.log("[PLAN] WRITE_PLAN CLICK HANDLER");
 		
