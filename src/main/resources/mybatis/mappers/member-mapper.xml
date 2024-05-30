@@ -94,5 +94,21 @@
 			M_ID = #{m_id}
 	
 	</delete>
+	
+	<select id="searchFriends"
+		parameterType="String"
+		resultType="MemberDto"
+	>
+	
+		SELECT 
+			* 
+		FROM 
+			TBL_MEMBER 
+		WHERE 
+			M_ID LIKE CONCAT('%', #{keyword}, '%')
+		ORDER BY 
+			M_ID ASC
+	
+	</select>
 
 </mapper>
